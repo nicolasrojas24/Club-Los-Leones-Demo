@@ -1,54 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Club de Leones - Demo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Club de Leones Las Condes — Demo</title>
+  <meta name="description" content="Demo inspirada en ceoi.cl con branding del Club de Leones Las Condes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-logo">
+          <!-- Reemplaza por tu logo si quieres -->
+          <img src="assets/img/logo.png" alt="Logo Club de Leones" class="logo">
+        </div>
+        <h1>Club de Leones Las Condes</h1>
+      </div>
+      <nav class="menu">
+        <a href="#especialidades">Especialidades</a>
+        <a href="#afiliacion">Afiliación</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+        <a class="cta" href="https://wa.me/56911111111" target="_blank" rel="noopener">Tomar hora</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>Club de Leones</h1>
-  <nav>
-    <a href="#especialidades">Especialidades</a>
-    <a href="#afiliacion">Afiliación</a>
-    <a href="#testimonios">Testimonios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+  <main>
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="container hero-grid">
+        <div>
+          <span class="kicker">Centro Médico — Las Condes</span>
+          <h2>Oftalmología y Odontología con vocación de servicio</h2>
+          <p class="muted">Diseño limpio, animaciones suaves y branding azul/amarillo del Club.</p>
+          <div class="buttons">
+            <a class="btn primary" href="https://wa.me/56911111111" target="_blank" rel="noopener">Tomar hora por WhatsApp</a>
+            <a class="btn" href="#especialidades">Ver especialidades</a>
+          </div>
+        </div>
+        <div class="hero-illu reveal">
+          <img src="assets/img/hero.jpg" alt="Centro Médico del Club de Leones">
+        </div>
+      </div>
+    </section>
 
-<section id="hero">
-  <h2>Bienvenidos al Club de Leones</h2>
-  <p>Comprometidos con la comunidad y el servicio.</p>
-  <a href="#afiliacion" class="cta">Únete Hoy</a>
-</section>
+    <!-- ESPECIALIDADES -->
+    <section id="especialidades" class="container reveal">
+      <div class="section-title">
+        <h3>Especialidades</h3>
+        <p class="muted">Acceso rápido a las áreas clínicas</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-media">
+            <img src="assets/img/oftalmo.jpg" alt="Atención de Oftalmología">
+          </div>
+          <div class="card-body">
+            <span class="chip">Oftalmología</span>
+            <h4>Exámenes y controles</h4>
+            <p class="muted">Refracción, control de lentes y evaluación integral.</p>
+          </div>
+        </article>
 
-<section id="especialidades">
-  <h2>Nuestras Especialidades</h2>
-  <p>Ofrecemos proyectos y actividades en áreas como salud, educación y ayuda social.</p>
-</section>
+        <article class="card">
+          <div class="card-media">
+            <img src="assets/img/odonto.jpg" alt="Atención de Odontología">
+          </div>
+          <div class="card-body">
+            <span class="chip">Odontología</span>
+            <h4>Diagnóstico y tratamientos</h4>
+            <p class="muted">Limpiezas, operatoria, urgencias y más.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<section id="afiliacion">
-  <h2>Afíliate</h2>
-  <p>Forma parte de nuestra comunidad solidaria. Tu aporte puede cambiar vidas.</p>
-  <a href="#contacto" class="cta">Contactar</a>
-</section>
+    <!-- AFILIACIÓN -->
+    <section id="afiliacion" class="container reveal">
+      <div class="section-title">
+        <h3>¿Cómo afiliarse?</h3>
+        <p class="muted">Pasos simples para integrarse al Club</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <strong>Completa el interés</strong>
+          <p class="muted">Escríbenos por WhatsApp o formulario.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <strong>Revisión</strong>
+          <p class="muted">La directiva te orientará con requisitos y pasos.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <strong>Bienvenida</strong>
+          <p class="muted">Recibirás confirmación y podrás participar.</p>
+        </div>
+      </div>
+    </section>
 
-<section id="testimonios">
-  <h2>Testimonios</h2>
-  <p>"Ser parte del Club de Leones me ha permitido ayudar a muchas personas y crecer como persona." - Juan Pérez</p>
-</section>
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="container reveal">
+      <div class="section-title">
+        <h3>Testimonios</h3>
+        <p class="muted">Comentarios de pacientes y socios</p>
+      </div>
+      <div class="testis">
+        <div class="testi"><blockquote>“Muy buena atención, rápida y humana.”</blockquote><p class="muted">— Paciente</p></div>
+        <div class="testi"><blockquote>“Profesionales preocupados y accesibles.”</blockquote><p class="muted">— Socia</p></div>
+        <div class="testi"><blockquote>“Excelente apoyo a la comunidad.”</blockquote><p class="muted">— Vecino</p></div>
+      </div>
+    </section>
 
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p>Correo: info@clubdeleones.cl</p>
-  <p>Teléfono: +56 9 1234 5678</p>
-</section>
+    <!-- CONTACTO -->
+    <section id="contacto" class="container reveal">
+      <div class="section-title">
+        <h3>Contacto</h3>
+        <p class="muted">Ubicación, horarios y vías de comunicación</p>
+      </div>
+      <div class="contact">
+        <div class="card-list">
+          <div class="list-item"><div class="num ico">📍</div><div><strong>Dirección</strong><p class="muted">Av. XXXXX 123, Las Condes</p></div></div>
+          <div class="list-item"><div class="num ico">⏰</div><div><strong>Horarios</strong><p class="muted">L–V 09:00–18:00</p></div></div>
+          <div class="list-item"><div class="num ico">📞</div><div><strong>Teléfono</strong><p class="muted">+56 2 XXXX XXXX</p></div></div>
+          <div class="list-item"><div class="num ico">💬</div><div><strong>WhatsApp</strong><p class="muted"><a href="https://wa.me/56911111111" target="_blank" rel="noopener">Escríbenos aquí</a></p></div></div>
+          <div class="list-item"><div class="num ico">📸</div><div><strong>Instagram</strong><p class="muted"><a href="#" target="_blank" rel="noopener">@clubleoneslascondes</a></p></div></div>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <!-- Reemplaza por tu iframe de Google Maps si quieres -->
+          <img src="assets/img/mapa.jpg" alt="Mapa de ubicación">
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-  <p>© 2025 Club de Leones - Todos los derechos reservados</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-wrap">
+      <p class="muted">© <span id="year"></span> Club de Leones Las Condes — Demo</p>
+      <p class="muted">Diseño demo por Nicolás Rojas</p>
+    </div>
+  </footer>
 
+  <!-- JS de animaciones -->
+  <script>
+    // Reveal on scroll
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show') })
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    // Header shadow on scroll
+    const hdr = document.querySelector('header');
+    window.addEventListener('scroll', ()=> {
+      if (window.scrollY > 8) hdr.classList.add('scrolled'); else hdr.classList.remove('scrolled');
+    });
+
+    // Año en footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
