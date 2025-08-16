@@ -10,7 +10,7 @@ window.addEventListener('scroll', ()=>{
   hdr.classList.toggle('scrolled', window.scrollY > 8);
 });
 
-// Parallax suave para el hero (opcional)
+// Parallax suave para el hero )
 const heroImg = document.querySelector('.hero-illu img');
 window.addEventListener('scroll', ()=>{
   if(!heroImg) return;
@@ -18,7 +18,7 @@ window.addEventListener('scroll', ()=>{
   heroImg.style.transform = `translateY(${y}px) scale(1.02)`;
 });
 
-// Contador (opcional)
+// Contador )
 function animateCounter(el, to, ms=1200){
   const start = 0; const t0 = performance.now();
   function step(t){

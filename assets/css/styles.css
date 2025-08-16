@@ -55,10 +55,90 @@ section{padding:48px 0}
 
 .footer-wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
 
-/* Animaciones tipo ceoi */
+/* Animaciones tipo ceoi creo*/
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
 .reveal.show{opacity:1;transform:none}
 
 @media (max-width:900px){
   .hero-grid,.contact{grid-template-columns:1fr}
+}
+/* Header con logo real */
+.brand-logo{
+  display:inline-grid;
+  place-items:center;
+  width:46px; height:46px;
+  border-radius:999px;
+  background:#fff;           /* marco blanco discreto */
+  border:1px solid #e5e7eb;  /* borde sutil ... no lo toques se va a la chet todo*/
+  overflow:hidden;
+}
+.brand-logo img{
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+}
+.brand h1{
+  margin:0;
+  font-size:1.05rem;
+  line-height:1.1;
+}
+@media (max-width:900px){
+  .menu{gap:.6rem}
+  .brand h1{font-size:.95rem}
+}
+.brand-logo {
+  display:inline-grid;
+  place-items:center;
+  width:46px; height:46px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  overflow:hidden;
+}
+.brand-logo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.brand h1 {
+  margin:0;
+  font-size:1.05rem;
+  line-height:1.1;
+}
+@media (max-width:900px){
+  .menu { gap:.6rem; }
+  .brand h1 { font-size:.95rem; }
+}
+.hero{
+  padding:64px 0;
+  background:linear-gradient(180deg,#ffffff,#f5f8ff);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:32px;
+  align-items:center;
+}
+.kicker{
+  display:inline-block;font-size:.85rem;font-weight:700;
+  color:var(--blue);background:#e8f0ff;border:1px solid #bfd3ff;
+  padding:.35rem .65rem;border-radius:999px;margin-bottom:12px;
+}
+.buttons{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:16px}
+.hero-illu img{
+  border-radius:16px; border:1px solid #e5e7eb; box-shadow:0 10px 25px rgba(2,6,23,.08);
+  will-change: transform; /* para el parallax suave */
+}
+
+/* Animación reveal + stagger */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+.reveal.show{opacity:1;transform:none}
+.reveal .stagger{opacity:0;transform:translateY(12px);transition:opacity .6s ease, transform .6s ease}
+.reveal.show .stagger{opacity:1;transform:none}
+.reveal.show .stagger:nth-child(1){transition-delay:.05s}
+.reveal.show .stagger:nth-child(2){transition-delay:.15s}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
 }
