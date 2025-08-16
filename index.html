@@ -3,217 +3,217 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Club de Leones Las Condes — Demo</title>
-  <meta name="description" content="Demo inspirada en ceoi.cl con branding del Club de Leones Las Condes." />
+  <title>Club de Leones Las Condes — Centro Médico</title>
+  <meta name="description" content="Centro Médico del Club de Leones Las Condes: Oftalmología y Odontología con atención cercana y accesible.">
 
-  <!-- Tipografías -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Club de Leones Las Condes — Centro Médico">
+  <meta property="og:description" content="Oftalmología y Odontología con vocación de servicio a la comunidad.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="assets/img/hero.jpg">
+
+  <!-- Icono -->
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+
+  <!-- Fuente + CSS -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- AOS (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Estilos del sitio -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192x192.png">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <meta name="theme-color" content="#0d47a1">
 </head>
 <body>
-  <!-- HEADER -->
-  <header id="top">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <span>🕘 L–V 09:00–18:00</span>
+      <a href="tel:+56224354502">📞 +56 2 2435 4502</a>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
     <div class="container nav">
-      <div class="brand">
-        <a href="#top" class="brand-logo" aria-label="Inicio">
-          <img src="assets/img/logo-club.png" alt="Logo Club de Leones Las Condes">
-        </a>
-        <h1>Club de Leones Las Condes</h1>
-      </div>
-      <nav class="menu">
-        <a href="#especialidades">Especialidades</a>
-        <a href="#afiliacion">Afiliación</a>
-        <a href="#metricas">Métricas</a>
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <img src="assets/img/logo-club.png" alt="Club de Leones Las Condes" width="40" height="40" loading="lazy" decoding="async">
+        <span>Leones Las Condes</span>
+      </a>
+
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainmenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="mainmenu" class="menu" aria-label="principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#afiliacion">Cómo agendar</a>
+        <a href="#metricas">Resultados</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#contacto">Contacto</a>
-        <a class="cta" href="https://wa.me/56911111111" target="_blank" rel="noopener">Tomar hora</a>
+        <a class="btn wa small" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">Agendar</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="container hero-grid">
-        <div data-aos="fade-up" data-aos-duration="800">
-          <span class="kicker">Centro Médico — Las Condes</span>
-          <h2>Oftalmología y Odontología con vocación de servicio</h2>
-          <p class="muted">Atención cercana y accesible para la comunidad.</p>
-          <div class="buttons">
-            <a class="btn primary" href="https://wa.me/56911111111" target="_blank" rel="noopener">Tomar hora por WhatsApp</a>
-            <a class="btn" href="#especialidades">Ver especialidades</a>
-          </div>
-        </div>
-        <div class="hero-illu" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="120">
-          <img src="assets/img/hero.jpg" alt="Centro Médico del Club de Leones">
+    <section id="inicio" class="hero section">
+      <div class="container hero-inner">
+        <h1>Salud con vocación de servicio</h1>
+        <p class="lead">Centro Médico del Club de Leones Las Condes. Oftalmología y Odontología para toda la comunidad.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Agendar hora</a>
+          <a class="btn outline" href="#servicios">Ver servicios</a>
         </div>
       </div>
     </section>
 
-    <!-- ESPECIALIDADES -->
-    <section id="especialidades" class="section">
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section reveal">
       <div class="container">
-        <div class="section-title">
-          <h3 data-aos="fade-right">Especialidades</h3>
-          <p class="muted" data-aos="fade-left" data-aos-delay="80">Acceso rápido a las áreas clínicas</p>
-        </div>
-        <div class="cards">
-          <article class="card" data-aos="fade-up">
-            <div class="card-media">
-              <img src="assets/img/oftalmo.jpg" alt="Atención de Oftalmología">
-            </div>
-            <div class="card-body">
-              <span class="chip">Oftalmología</span>
-              <h4>Exámenes y controles</h4>
-              <p class="muted">Refracción, control de lentes y evaluación integral.</p>
-            </div>
+        <h2 class="section-title">Especialidades</h2>
+        <div class="grid-3">
+          <article class="card">
+            <img src="assets/img/oftalmo.png" alt="Consulta de oftalmología" width="800" height="520" loading="lazy" decoding="async">
+            <h3>Oftalmología</h3>
+            <p>Controles, exámenes de la vista y derivaciones.</p>
           </article>
-
-          <article class="card" data-aos="fade-up" data-aos-delay="120">
-            <div class="card-media">
-              <img src="assets/img/odonto.jpg" alt="Atención de Odontología">
-            </div>
-            <div class="card-body">
-              <span class="chip">Odontología</span>
-              <h4>Diagnóstico y tratamientos</h4>
-              <p class="muted">Limpiezas, operatoria, urgencias y más.</p>
-            </div>
+          <article class="card">
+            <img src="assets/img/odonto.png" alt="Atención odontológica" width="800" height="520" loading="lazy" decoding="async">
+            <h3>Odontología</h3>
+            <p>Odontología general, ortodoncia, endodoncia y más.</p>
+          </article>
+          <article class="card">
+            <img src="assets/img/hero.jpg" alt="Atención accesible" width="800" height="520" loading="lazy" decoding="async">
+            <h3>Accesible</h3>
+            <p>Atención cercana, precios justos y enfoque comunitario.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- AFILIACIÓN -->
-    <section id="afiliacion" class="section">
+    <!-- CÓMO AGENDAR -->
+    <section id="afiliacion" class="section reveal">
       <div class="container">
-        <div class="section-title">
-          <h3 data-aos="fade-right">¿Cómo afiliarse?</h3>
-          <p class="muted" data-aos="fade-left" data-aos-delay="80">Pasos simples para integrarse al Club</p>
-        </div>
-        <div class="steps">
-          <div class="step" data-aos="fade-up">
+        <h2 class="section-title">¿Cómo agendar?</h2>
+        <div class="grid-3">
+          <article class="card step">
             <div class="num">1</div>
-            <strong>Completa el interés</strong>
-            <p class="muted">Escríbenos por WhatsApp o formulario.</p>
-          </div>
-          <div class="step" data-aos="fade-up" data-aos-delay="100">
+            <h3>Escríbenos</h3>
+            <p>Contáctanos por WhatsApp y cuéntanos tu necesidad.</p>
+          </article>
+          <article class="card step">
             <div class="num">2</div>
-            <strong>Revisión</strong>
-            <p class="muted">La directiva te orientará con requisitos y pasos.</p>
-          </div>
-          <div class="step" data-aos="fade-up" data-aos-delay="200">
+            <h3>Confirmamos</h3>
+            <p>Coordinamos día y hora según tu disponibilidad.</p>
+          </article>
+          <article class="card step">
             <div class="num">3</div>
-            <strong>Bienvenida</strong>
-            <p class="muted">Recibirás confirmación y podrás participar.</p>
-          </div>
+            <h3>Te esperamos</h3>
+            <p>Llega 10 minutos antes con tu cédula y medio de pago.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- MÉTRICAS -->
-    <section id="metricas" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h3 data-aos="fade-right">Resultados que nos motivan</h3>
-          <p class="muted" data-aos="fade-left" data-aos-delay="80">Compromiso con la comunidad</p>
+    <section id="metricas" class="section reveal alt">
+      <div class="container grid-3">
+        <div class="metric">
+          <div class="metric-number" data-target="1200">0</div>
+          <div class="metric-label">Pacientes atendidos</div>
         </div>
-        <div class="metrics">
-          <div class="metric-card" data-aos="zoom-in">
-            <div class="metric-number"><span class="counter" data-to="1200">0</span>+</div>
-            <div class="metric-label">Atenciones oftalmológicas</div>
-          </div>
-          <div class="metric-card" data-aos="zoom-in" data-aos-delay="80">
-            <div class="metric-number"><span class="counter" data-to="900">0</span>+</div>
-            <div class="metric-label">Atenciones odontológicas</div>
-          </div>
-          <div class="metric-card" data-aos="zoom-in" data-aos-delay="160">
-            <div class="metric-number"><span class="counter" data-to="600">0</span>+</div>
-            <div class="metric-label">Beneficiarios al año</div>
-          </div>
-          <div class="metric-card" data-aos="zoom-in" data-aos-delay="240">
-            <div class="metric-number"><span class="counter" data-to="25">0</span>+</div>
-            <div class="metric-label">Años de servicio</div>
-          </div>
+        <div class="metric">
+          <div class="metric-number" data-target="25">0</div>
+          <div class="metric-label">Años de servicio</div>
+        </div>
+        <div class="metric">
+          <div class="metric-number" data-target="2">0</div>
+          <div class="metric-label">Especialidades</div>
         </div>
       </div>
     </section>
 
     <!-- TESTIMONIOS -->
-    <section id="testimonios" class="section">
+    <section id="testimonios" class="section reveal">
       <div class="container">
-        <div class="section-title">
-          <h3 data-aos="fade-right">Testimonios</h3>
-          <p class="muted" data-aos="fade-left" data-aos-delay="80">Comentarios de pacientes y socios</p>
-        </div>
-        <div class="testis">
-          <div class="testi" data-aos="fade-up"><blockquote>“Muy buena atención, rápida y humana.”</blockquote><p class="muted">— Paciente</p></div>
-          <div class="testi" data-aos="fade-up" data-aos-delay="100"><blockquote>“Profesionales preocupados y accesibles.”</blockquote><p class="muted">— Socia</p></div>
-          <div class="testi" data-aos="fade-up" data-aos-delay="200"><blockquote>“Excelente apoyo a la comunidad.”</blockquote><p class="muted">— Vecino</p></div>
+        <h2 class="section-title">Testimonios</h2>
+        <div class="grid-3">
+          <figure class="card">
+            <blockquote>Excelente atención y trato humano.</blockquote>
+            <figcaption>— Paciente de Las Condes</figcaption>
+          </figure>
+          <figure class="card">
+            <blockquote>Agendé rápido y me atendieron muy bien.</blockquote>
+            <figcaption>— Paciente de Vitacura</figcaption>
+          </figure>
+          <figure class="card">
+            <blockquote>Profesionales y cercanos. Recomendado.</blockquote>
+            <figcaption>— Paciente de Ñuñoa</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h3 data-aos="fade-right">Contacto</h3>
-          <p class="muted" data-aos="fade-left" data-aos-delay="80">Ubicación, horarios y vías de comunicación</p>
+    <section id="contacto" class="section reveal">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contacto</h2>
+          <ul class="contact-list" role="list">
+            <li><strong>Dirección:</strong>
+              <a href="https://www.google.com/maps/search/?api=1&query=Cirio%201620%2C%20Las%20Condes" target="_blank" rel="noopener">Cirio 1620, Las Condes</a>
+            </li>
+            <li><strong>Horarios:</strong> L–V 09:00–18:00</li>
+            <li><strong>Teléfono:</strong> <a href="tel:+56224354502">+56 2 2435 4502</a></li>
+            <li><strong>WhatsApp:</strong>
+              <a href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Escríbenos aquí</a>
+            </li>
+            <li><strong>Instagram:</strong>
+              <a href="https://www.instagram.com/clubleoneslascondes" target="_blank" rel="noopener">@clubleoneslascondes</a>
+            </li>
+          </ul>
         </div>
-        <div class="contact">
-          <div class="card-list">
-            <div class="list-item" data-aos="fade-up"><div class="num ico">📍</div><div><strong>Dirección</strong><p class="muted">Av. XXXXX 123, Las Condes</p></div></div>
-            <div class="list-item" data-aos="fade-up" data-aos-delay="100"><div class="num ico">⏰</div><div><strong>Horarios</strong><p class="muted">L–V 09:00–18:00</p></div></div>
-            <div class="list-item" data-aos="fade-up" data-aos-delay="200"><div class="num ico">📞</div><div><strong>Teléfono</strong><p class="muted">+56 2 XXXX XXXX</p></div></div>
-            <div class="list-item" data-aos="fade-up" data-aos-delay="300"><div class="num ico">💬</div><div><strong>WhatsApp</strong><p class="muted"><a href="https://wa.me/56911111111" target="_blank" rel="noopener">Escríbenos aquí</a></p></div></div>
-            <div class="list-item" data-aos="fade-up" data-aos-delay="400"><div class="num ico">📸</div><div><strong>Instagram</strong><p class="muted"><a href="#" target="_blank" rel="noopener">@clubleoneslascondes</a></p></div></div>
-          </div>
-
-          <!-- MAPA INTERACTIVO (Responsive) -->
-          <div class="card map-wrapper" data-aos="fade-left" data-aos-delay="120">
-            <iframe
-              class="gmap"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.9222819562738!2d-70.5328488!3d-33.425270499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ce874a564739%3A0xc0a7251f1c81e715!2sClub%20de%20Leones%20de%20las%20Condes!5e0!3m2!1ses-419!2scl!4v1755313582221!5m2!1ses-419!2scl"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-              aria-label="Mapa de ubicación del Club de Leones Las Condes"></iframe>
-            <noscript>
-              <a href="https://maps.google.com" target="_blank" rel="noopener">Ver ubicación en Google Maps</a>
-            </noscript>
-          </div>
+        <div>
+          <iframe
+            title="Ubicación Club de Leones Las Condes"
+            src="https://www.google.com/maps?q=Cirio%201620,%20Las%20Condes&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-wrap">
-      <p class="muted">© <span id="year"></span> Club de Leones Las Condes — Demo</p>
-      <p class="muted">Diseño demo por Nicolás Rojas</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="y"></span> Club de Leones Las Condes</p>
     </div>
   </footer>
 
-  <!-- JS: AOS + app -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    AOS.init({ once:true, duration:700, offset:80 });
+  <!-- Barra móvil (solo mobile) -->
+  <div class="mobile-cta">
+    <a href="tel:+56224354502">Llamar</a>
+    <a class="wa" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
+  <!-- Botón flotante (opcional, puedes quitarlo si usas la barra móvil) -->
+  <a class="cta-wa" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">WhatsApp</a>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalClinic",
+    "name":"Centro Médico — Club de Leones Las Condes",
+    "medicalSpecialty":["Ophthalmologic","Dentistry"],
+    "address":{"@type":"PostalAddress","streetAddress":"Cirio 1620","addressLocality":"Las Condes","addressRegion":"RM","addressCountry":"CL"},
+    "telephone":"+56 2 2435 4502",
+    "openingHours":"Mo-Fr 09:00-18:00",
+    "sameAs":["https://www.instagram.com/clubleoneslascondes"]
+  }
   </script>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -1,37 +1,68 @@
-// Reveal on scroll
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show') })
-},{threshold:0.12});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Año en footer
+const y = document.getElementById('y');
+if (y) y.textContent = new Date().getFullYear();
 
-// Header shadow on scroll
-const hdr = document.querySelector('header');
-window.addEventListener('scroll', ()=>{
-  hdr.classList.toggle('scrolled', window.scrollY > 8);
-});
-
-// Parallax suave para la imagen del hero
-const heroImg = document.querySelector('.hero-illu img');
-window.addEventListener('scroll', ()=>{
-  if(!heroImg) return;
-  const y = window.scrollY * 0.15; // intensidad
-  heroImg.style.transform = `translateY(${y}px) scale(1.02)`;
-});
-
-// Contadores (para spans con class="counter" y data-to="123")
-function animateCounter(el, to, ms=1200){
-  const start = 0; const t0 = performance.now();
-  function step(t){
-    const p = Math.min((t - t0)/ms, 1);
-    el.textContent = Math.floor(start + p*(to-start));
-    if(p<1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-document.querySelectorAll('.counter').forEach(el=>{
-  const to = parseInt(el.dataset.to||'0',10);
-  const ob = new IntersectionObserver((ents,ob2)=>{
-    if(ents[0].isIntersecting){ animateCounter(el,to); ob2.disconnect(); }
+// Menú responsive
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('#mainmenu');
+if (burger && menu) {
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-  ob.observe(el);
+}
+
+// Reveal on scroll
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || !els.length){
+    els.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.15});
+  els.forEach(el => io.observe(el));
+})();
+
+// Métricas animadas
+(function(){
+  const nums = document.querySelectorAll('.metric-number');
+  if(!nums.length) return;
+  const animate = (el, to, dur=1200)=>{
+    const start = 0, t0 = performance.now();
+    const step = (t)=>{
+      const p = Math.min(1, (t - t0)/dur);
+      el.textContent = Math.floor(start + (to - start)*p).toLocaleString('es-CL');
+      if(p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  if(!('IntersectionObserver' in window)){
+    nums.forEach(el => animate(el, parseInt(el.dataset.target||'0',10)));
+    return;
+  }
+  const io = new IntersectionObserver((entries, o)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        animate(e.target, parseInt(e.target.dataset.target||'0',10));
+        o.unobserve(e.target);
+      }
+    });
+  },{threshold:.4});
+  nums.forEach(n => io.observe(n));
+})();
+
+// Tracking básico (WhatsApp y Llamar)
+const track = (name, meta={}) => { try { console.log('track', name, meta); } catch(e){} };
+document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
+  a.addEventListener('click', ()=> track('click_whatsapp', {href:a.href}));
+});
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>{
+  a.addEventListener('click', ()=> track('click_llamar', {href:a.href}));
 });
