@@ -12,7 +12,10 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/hero.jpg">
 
-  <!-- Icono -->
+  <!-- Preload hero -->
+  <link rel="preload" as="image" href="assets/img/hero.jpg">
+
+  <!-- Favicon -->
   <link rel="icon" href="assets/icons/favicon.png" type="image/png">
 
   <!-- Fuente -->
@@ -36,11 +39,11 @@
     </div>
   </div>
 
-  <!-- Header -->
+  <!-- Header / Nav -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#inicio" aria-label="Inicio">
-        <img src="assets/img/logo-club.png" alt="Club de Leones Las Condes" width="40" height="40" loading="lazy" decoding="async">
+        <img src="assets/img/logo-club.png" alt="Club de Leones Las Condes" width="40" height="40" loading="lazy">
         <span>Leones Las Condes</span>
       </a>
 
@@ -52,41 +55,64 @@
         <a href="#mision">Misión y Visión</a>
         <a href="#servicios">Servicios</a>
         <a href="#afiliacion">Cómo agendar</a>
-        <a href="#metricas">Resultados</a>
+        <a href="#metricas">Impacto</a>
+        <a href="#equipo">Equipo</a>
         <a href="#testimonios">Testimonios</a>
+        <a href="#galeria">Galería</a>
         <a href="#socios">Únete</a>
         <a href="#contacto">Contacto</a>
-        <a class="btn wa small" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">Agendar</a>
+        <a class="btn wa small" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Agendar</a>
       </nav>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <!-- HERO con slider -->
+    <!-- HERO: Slider -->
     <section id="inicio" class="hero section">
       <div class="container">
-        <div class="hero-slider swiper">
+        <div class="hero-slider swiper parallax">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="assets/img/hero.jpg" alt="Centro Médico — atención cercana"></div>
-            <div class="swiper-slide"><img src="assets/img/oftalmo.png" alt="Oftalmología"></div>
-            <div class="swiper-slide"><img src="assets/img/odonto.png" alt="Odontología"></div>
+            <!-- Slide 1 -->
+            <div class="swiper-slide hero-slide">
+              <img src="assets/img/hero.jpg" alt="Centro Médico — atención cercana">
+              <div class="slide-content">
+                <h1>Salud con vocación de servicio</h1>
+                <p class="lead">Centro Médico del Club de Leones Las Condes. Atención accesible y cercana.</p>
+                <div class="cta-row">
+                  <a class="btn primary" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Agendar hora</a>
+                  <a class="btn outline" href="#servicios">Ver servicios</a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide hero-slide">
+              <img src="assets/img/oftalmo.png" alt="Oftalmología">
+              <div class="slide-content">
+                <h1>Oftalmología</h1>
+                <p class="lead">Controles, fondo de ojo, tonometría y más.</p>
+                <div class="cta-row"><a class="btn primary" href="https://wa.me/56938961882?text=Quiero%20agendar%20Oftalmolog%C3%ADa" target="_blank" rel="noopener">Agendar</a></div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide hero-slide">
+              <img src="assets/img/odonto.png" alt="Odontología">
+              <div class="slide-content">
+                <h1>Odontología</h1>
+                <p class="lead">Odontología general, endodoncia, ortodoncia y urgencias.</p>
+                <div class="cta-row"><a class="btn primary" href="https://wa.me/56938961882?text=Quiero%20agendar%20Odontolog%C3%ADa" target="_blank" rel="noopener">Agendar</a></div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="hero-overlay">
-          <h1>Salud con vocación de servicio</h1>
-          <p class="lead">Centro Médico del Club de Leones Las Condes. Oftalmología y Odontología para toda la comunidad.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Agendar hora</a>
-            <a class="btn outline" href="#servicios">Ver servicios</a>
-          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
 
     <!-- MISIÓN / VISIÓN -->
     <section id="mision" class="section reveal">
-      <div class="container grid-3" style="grid-template-columns:1fr 1fr; gap:1.2rem">
+      <div class="container grid-2">
         <article class="card">
           <h2>Misión</h2>
           <p>Entregar atención médica accesible y de calidad a nuestra comunidad, con enfoque humano y solidario.</p>
@@ -104,7 +130,7 @@
         <h2 class="section-title">Especialidades</h2>
         <div class="grid-3">
           <article class="card">
-            <img src="assets/img/oftalmo.png" alt="Consulta de oftalmología" width="800" height="520" loading="lazy" decoding="async">
+            <img src="assets/img/oftalmo.png" alt="Consulta de oftalmología" loading="lazy">
             <h3>Oftalmología</h3>
             <ul class="bullets">
               <li>Control visual y receta de lentes</li>
@@ -116,7 +142,7 @@
           </article>
 
           <article class="card">
-            <img src="assets/img/odonto.png" alt="Atención odontológica" width="800" height="520" loading="lazy" decoding="async">
+            <img src="assets/img/odonto.png" alt="Atención odontológica" loading="lazy">
             <h3>Odontología</h3>
             <ul class="bullets">
               <li>Odontología general y limpiezas</li>
@@ -128,7 +154,7 @@
           </article>
 
           <article class="card">
-            <img src="assets/img/hero.jpg" alt="Atención accesible" width="800" height="520" loading="lazy" decoding="async">
+            <img src="assets/img/hero.jpg" alt="Atención accesible" loading="lazy">
             <h3>Accesible</h3>
             <ul class="bullets">
               <li>Atención cercana a la comunidad</li>
@@ -146,60 +172,69 @@
       <div class="container">
         <h2 class="section-title">¿Cómo agendar?</h2>
         <div class="grid-3">
-          <article class="card step">
-            <div class="num">1</div>
-            <h3>Escríbenos</h3>
-            <p>Contáctanos por WhatsApp y cuéntanos tu necesidad.</p>
-          </article>
-          <article class="card step">
-            <div class="num">2</div>
-            <h3>Confirmamos</h3>
-            <p>Coordinamos día y hora según tu disponibilidad.</p>
-          </article>
-          <article class="card step">
-            <div class="num">3</div>
-            <h3>Te esperamos</h3>
-            <p>Llega 10 minutos antes con tu cédula y medio de pago.</p>
-          </article>
+          <article class="card step"><div class="num">1</div><h3>Escríbenos</h3><p>Contáctanos por WhatsApp y cuéntanos tu necesidad.</p></article>
+          <article class="card step"><div class="num">2</div><h3>Confirmamos</h3><p>Coordinamos día y hora según tu disponibilidad.</p></article>
+          <article class="card step"><div class="num">3</div><h3>Te esperamos</h3><p>Llega 10 minutos antes con tu cédula y medio de pago.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- MÉTRICAS -->
+    <!-- MÉTRICAS / IMPACTO -->
     <section id="metricas" class="section reveal alt">
       <div class="container grid-3">
-        <div class="metric">
-          <div class="metric-number" data-target="1200">0</div>
-          <div class="metric-label">Pacientes atendidos</div>
-        </div>
-        <div class="metric">
-          <div class="metric-number" data-target="25">0</div>
-          <div class="metric-label">Años de servicio</div>
-        </div>
-        <div class="metric">
-          <div class="metric-number" data-target="2">0</div>
-          <div class="metric-label">Especialidades</div>
+        <div class="metric"><div class="metric-number" data-target="1200">0</div><div class="metric-label">Pacientes atendidos</div></div>
+        <div class="metric"><div class="metric-number" data-target="25">0</div><div class="metric-label">Años de servicio</div></div>
+        <div class="metric"><div class="metric-number" data-target="2">0</div><div class="metric-label">Especialidades</div></div>
+      </div>
+    </section>
+
+    <!-- EQUIPO MÉDICO -->
+    <section id="equipo" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Nuestro equipo</h2>
+        <div class="grid-3">
+          <article class="card team">
+            <img src="assets/img/medico1.jpg" alt="Dra. María Pérez — Oftalmóloga" loading="lazy">
+            <h3>Dra. María Pérez</h3>
+            <p class="muted">Oftalmóloga</p>
+          </article>
+          <article class="card team">
+            <img src="assets/img/medico2.jpg" alt="Dr. Juan Rojas — Odontólogo" loading="lazy">
+            <h3>Dr. Juan Rojas</h3>
+            <p class="muted">Odontólogo</p>
+          </article>
+          <article class="card team">
+            <img src="assets/img/medico3.jpg" alt="Dra. Paula Díaz — Odontopediatra" loading="lazy">
+            <h3>Dra. Paula Díaz</h3>
+            <p class="muted">Odontopediatra</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIOS -->
+    <!-- TESTIMONIOS (carrusel) -->
     <section id="testimonios" class="section reveal">
       <div class="container">
         <h2 class="section-title">Testimonios</h2>
-        <div class="grid-3">
-          <figure class="card">
-            <blockquote>Excelente atención y trato humano.</blockquote>
-            <figcaption>— Paciente de Las Condes</figcaption>
-          </figure>
-          <figure class="card">
-            <blockquote>Agendé rápido y me atendieron muy bien.</blockquote>
-            <figcaption>— Paciente de Vitacura</figcaption>
-          </figure>
-          <figure class="card">
-            <blockquote>Profesionales y cercanos. Recomendado.</blockquote>
-            <figcaption>— Paciente de Ñuñoa</figcaption>
-          </figure>
+        <div class="swiper testimonios-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><figure class="card"><blockquote>Excelente atención y trato humano.</blockquote><figcaption>— Paciente de Las Condes</figcaption></figure></div>
+            <div class="swiper-slide"><figure class="card"><blockquote>Agendé rápido y me atendieron muy bien.</blockquote><figcaption>— Paciente de Vitacura</figcaption></figure></div>
+            <div class="swiper-slide"><figure class="card"><blockquote>Profesionales y cercanos. Recomendado.</blockquote><figcaption>— Paciente de Ñuñoa</figcaption></figure></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Galería</h2>
+        <div class="gallery">
+          <img src="assets/img/gal1.jpg" alt="Galería 1" loading="lazy">
+          <img src="assets/img/gal2.jpg" alt="Galería 2" loading="lazy">
+          <img src="assets/img/gal3.jpg" alt="Galería 3" loading="lazy">
+          <img src="assets/img/gal4.jpg" alt="Galería 4" loading="lazy">
         </div>
       </div>
     </section>
@@ -215,119 +250,71 @@
       </div>
     </section>
 
-    <!-- CONTACTO (nuevo) -->
-<section id="contacto" class="section reveal">
-  <div class="container contact-grid">
-    <!-- Tarjeta de contacto -->
-    <div class="contact-card fade-up">
-      <header class="contact-header">
-        <h2>Contacto</h2>
-        <p class="sub">Estamos para ayudarte. Elige el canal que prefieras.</p>
-      </header>
+    <!-- CONTACTO -->
+    <section id="contacto" class="section reveal">
+      <div class="container contact-grid">
+        <div class="contact-card fade-up">
+          <header class="contact-header">
+            <h2>Contacto</h2>
+            <p class="sub">Estamos para ayudarte. Elige el canal que prefieras.</p>
+          </header>
 
-      <ul class="contact-list pro" role="list">
-        <li>
-          <span class="ico">📍</span>
-          <div>
-            <strong>Dirección</strong><br>
-            <a href="https://www.google.com/maps/search/?api=1&query=Cirio%201620%2C%20Las%20Condes" target="_blank" rel="noopener">Cirio 1620, Las Condes</a>
-          </div>
-        </li>
-        <li>
-          <span class="ico">🕘</span>
-          <div>
-            <strong>Horarios</strong><br>L–V 09:00–18:00
-          </div>
-        </li>
-        <li>
-          <span class="ico">📞</span>
-          <div>
-            <strong>Teléfono</strong><br><a href="tel:+56224354502">+56 2 2435 4502</a>
-          </div>
-        </li>
-        <li>
-          <span class="ico">💬</span>
-          <div>
-            <strong>WhatsApp</strong><br>
-            <a href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Escríbenos aquí</a>
-          </div>
-        </li>
-        <li>
-          <span class="ico">📸</span>
-          <div>
-            <strong>Instagram</strong><br>
-            <a href="https://www.instagram.com/clubleoneslascondes" target="_blank" rel="noopener">@clubleoneslascondes</a>
-          </div>
-        </li>
-        <li>
-          <span class="ico">✉️</span>
-          <div>
-            <strong>Email</strong><br>
-            <a href="mailto:nicolasrojas1724@gmail.com">nicolasrojas1724@gmail.com</a>
-          </div>
-        </li>
-      </ul>
+          <ul class="contact-list pro" role="list">
+            <li><span class="ico">📍</span><div><strong>Dirección</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Cirio%201620%2C%20Las%20Condes" target="_blank" rel="noopener">Cirio 1620, Las Condes</a></div></li>
+            <li><span class="ico">🕘</span><div><strong>Horarios</strong><br>L–V 09:00–18:00</div></li>
+            <li><span class="ico">📞</span><div><strong>Teléfono</strong><br><a href="tel:+56224354502">+56 2 2435 4502</a></div></li>
+            <li><span class="ico">💬</span><div><strong>WhatsApp</strong><br><a href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Escríbenos aquí</a></div></li>
+            <li><span class="ico">📸</span><div><strong>Instagram</strong><br><a href="https://www.instagram.com/clubleoneslascondes" target="_blank" rel="noopener">@clubleoneslascondes</a></div></li>
+            <li><span class="ico">✉️</span><div><strong>Email</strong><br><a href="mailto:nicolasrojas1724@gmail.com">nicolasrojas1724@gmail.com</a></div></li>
+          </ul>
 
-      <!-- Form pro con labels flotantes -->
-      <form id="contact-form" class="contact-form pro-form" novalidate>
-        <div class="row">
-          <div class="field">
-            <input type="text" name="nombre" id="f-nombre" placeholder=" " required>
-            <label for="f-nombre">Tu nombre</label>
-          </div>
-          <div class="field">
-            <input type="email" name="email" id="f-email" placeholder=" " required>
-            <label for="f-email">Tu correo</label>
-          </div>
-        </div>
-        <div class="field">
-          <textarea name="mensaje" id="f-msg" rows="5" placeholder=" " required></textarea>
-          <label for="f-msg">Cuéntanos en qué podemos ayudarte</label>
-        </div>
-
-        <div class="actions">
-          <button class="btn primary" type="submit">Enviar</button>
-          <a class="btn outline" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-        </div>
-        <p class="form-hint">* Por ahora este formulario abre tu correo y envía a <strong>nicolasrojas1724@gmail.com</strong></p>
-      </form>
-    </div>
-
-    <!-- Mapa -->
-    <div class="map-wrap fade-up d2">
-      <iframe
-        title="Ubicación Club de Leones Las Condes"
-        src="https://www.google.com/maps?q=Cirio%201620,%20Las%20Condes&output=embed"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</section>
-
-          <!-- Formulario (mailto a tu correo de prueba) -->
-          <form id="contact-form" class="contact-form" novalidate>
+          <form id="contact-form" class="contact-form pro-form" novalidate>
             <div class="row">
-              <input type="text" name="nombre" placeholder="Tu nombre" aria-label="Tu nombre" required>
-              <input type="email" name="email" placeholder="Tu correo" aria-label="Tu correo" required>
+              <div class="field"><input type="text" name="nombre" id="f-nombre" placeholder=" " required><label for="f-nombre">Tu nombre</label></div>
+              <div class="field"><input type="email" name="email" id="f-email" placeholder=" " required><label for="f-email">Tu correo</label></div>
             </div>
-            <textarea name="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte" aria-label="Mensaje" required></textarea>
-            <button class="btn primary" type="submit">Enviar</button>
-            <p class="form-hint">* Por ahora este formulario abre tu cliente de correo y envía a <strong>nicolasrojas1724@gmail.com</strong></p>
+            <div class="field"><textarea name="mensaje" id="f-msg" rows="5" placeholder=" " required></textarea><label for="f-msg">Cuéntanos en qué podemos ayudarte</label></div>
+            <div class="actions">
+              <button class="btn primary" type="submit">Enviar</button>
+              <a class="btn outline" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+            <p class="form-hint">* Por ahora este formulario abre tu correo y envía a <strong>nicolasrojas1724@gmail.com</strong></p>
           </form>
         </div>
 
-        <div>
-          <iframe
-            title="Ubicación Club de Leones Las Condes"
-            src="https://www.google.com/maps?q=Cirio%201620,%20Las%20Condes&output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-wrap fade-up d2">
+          <iframe title="Ubicación Club de Leones Las Condes" src="https://www.google.com/maps?q=Cirio%201620,%20Las%20Condes&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer con menús -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-grid">
+      <div>
+        <h4>Leones Las Condes</h4>
+        <p class="muted">Compromiso con la salud y la comunidad.</p>
+      </div>
+      <div>
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+56224354502">+56 2 2435 4502</a></li>
+          <li><a href="mailto:nicolasrojas1724@gmail.com">nicolasrojas1724@gmail.com</a></li>
+          <li><a href="https://wa.me/56938961882" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container legal">
       <p>© <span id="y"></span> Club de Leones Las Condes</p>
     </div>
   </footer>
@@ -338,30 +325,18 @@
     <a class="wa" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
-  <!-- Botón WA (opcional) -->
+  <!-- Botón WA flotante -->
   <a class="cta-wa" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">WhatsApp</a>
 
-  <!-- Schema.org -->
+  <!-- Schema -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"MedicalClinic",
-    "name":"Centro Médico — Club de Leones Las Condes",
-    "medicalSpecialty":["Ophthalmologic","Dentistry"],
-    "address":{"@type":"PostalAddress","streetAddress":"Cirio 1620","addressLocality":"Las Condes","addressRegion":"RM","addressCountry":"CL"},
-    "telephone":"+56 2 2435 4502",
-    "openingHours":"Mo-Fr 09:00-18:00",
-    "sameAs":["https://www.instagram.com/clubleoneslascondes"]
-  }
+  {"@context":"https://schema.org","@type":"MedicalClinic","name":"Centro Médico — Club de Leones Las Condes","medicalSpecialty":["Ophthalmologic","Dentistry"],"address":{"@type":"PostalAddress","streetAddress":"Cirio 1620","addressLocality":"Las Condes","addressRegion":"RM","addressCountry":"CL"},"telephone":"+56 2 2435 4502","openingHours":"Mo-Fr 09:00-18:00","sameAs":["https://www.instagram.com/clubleoneslascondes"]}
   </script>
 
   <!-- Swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script>
-    new Swiper('.hero-slider', { loop:true, autoplay:{delay:4000}, effect:'fade', speed:800 });
-  </script>
 
-  <!-- JS -->
+  <!-- JS del sitio -->
   <script src="assets/js/app.js"></script>
 </body>
 </html>
