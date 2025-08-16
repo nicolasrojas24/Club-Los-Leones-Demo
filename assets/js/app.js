@@ -66,3 +66,26 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
 document.querySelectorAll('a[href^="tel:"]').forEach(a=>{
   a.addEventListener('click', ()=> track('click_llamar', {href:a.href}));
 });
+
+// Formulario: mailto a tu correo de prueba
+const form = document.getElementById('contact-form');
+if (form) {
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const data = new FormData(form);
+    const nombre = (data.get('nombre') || '').toString().trim();
+    const email  = (data.get('email')  || '').toString().trim();
+    const mensaje= (data.get('mensaje')|| '').toString().trim();
+
+    if (!nombre || !email || !mensaje) {
+      alert('Por favor completa todos los campos.');
+      return;
+    }
+    const subject = encodeURIComponent('Contacto web — Club de Leones Las Condes');
+    const body = encodeURIComponent(
+      `Nombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`
+    );
+
+    window.location.href = `mailto:nicolasrojas1724@gmail.com?subject=${subject}&body=${body}`;
+  });
+}

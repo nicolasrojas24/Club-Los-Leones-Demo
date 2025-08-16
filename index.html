@@ -6,19 +6,23 @@
   <title>Club de Leones Las Condes — Centro Médico</title>
   <meta name="description" content="Centro Médico del Club de Leones Las Condes: Oftalmología y Odontología con atención cercana y accesible.">
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Club de Leones Las Condes — Centro Médico">
   <meta property="og:description" content="Oftalmología y Odontología con vocación de servicio a la comunidad.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="">
   <meta property="og:image" content="assets/img/hero.jpg">
 
   <!-- Icono -->
   <link rel="icon" href="assets/icons/favicon.png" type="image/png">
 
-  <!-- Fuente + CSS -->
+  <!-- Fuente -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Swiper (slider) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -32,7 +36,7 @@
     </div>
   </div>
 
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#inicio" aria-label="Inicio">
@@ -45,10 +49,12 @@
       </button>
 
       <nav id="mainmenu" class="menu" aria-label="principal">
+        <a href="#mision">Misión y Visión</a>
         <a href="#servicios">Servicios</a>
         <a href="#afiliacion">Cómo agendar</a>
         <a href="#metricas">Resultados</a>
         <a href="#testimonios">Testimonios</a>
+        <a href="#socios">Únete</a>
         <a href="#contacto">Contacto</a>
         <a class="btn wa small" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">Agendar</a>
       </nav>
@@ -56,15 +62,39 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <!-- HERO -->
+    <!-- HERO con slider -->
     <section id="inicio" class="hero section">
-      <div class="container hero-inner">
-        <h1>Salud con vocación de servicio</h1>
-        <p class="lead">Centro Médico del Club de Leones Las Condes. Oftalmología y Odontología para toda la comunidad.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Agendar hora</a>
-          <a class="btn outline" href="#servicios">Ver servicios</a>
+      <div class="container">
+        <div class="hero-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/img/hero.jpg" alt="Centro Médico — atención cercana"></div>
+            <div class="swiper-slide"><img src="assets/img/oftalmo.png" alt="Oftalmología"></div>
+            <div class="swiper-slide"><img src="assets/img/odonto.png" alt="Odontología"></div>
+          </div>
         </div>
+
+        <div class="hero-overlay">
+          <h1>Salud con vocación de servicio</h1>
+          <p class="lead">Centro Médico del Club de Leones Las Condes. Oftalmología y Odontología para toda la comunidad.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Agendar hora</a>
+            <a class="btn outline" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISIÓN / VISIÓN -->
+    <section id="mision" class="section reveal">
+      <div class="container grid-3" style="grid-template-columns:1fr 1fr; gap:1.2rem">
+        <article class="card">
+          <h2>Misión</h2>
+          <p>Entregar atención médica accesible y de calidad a nuestra comunidad, con enfoque humano y solidario.</p>
+        </article>
+        <article class="card">
+          <h2>Visión</h2>
+          <p>Ser un referente en salud cercana y sostenible en Las Condes, apoyando con vocación el bienestar de las personas.</p>
+        </article>
       </div>
     </section>
 
@@ -76,17 +106,36 @@
           <article class="card">
             <img src="assets/img/oftalmo.png" alt="Consulta de oftalmología" width="800" height="520" loading="lazy" decoding="async">
             <h3>Oftalmología</h3>
-            <p>Controles, exámenes de la vista y derivaciones.</p>
+            <ul class="bullets">
+              <li>Control visual y receta de lentes</li>
+              <li>Fondo de ojo y OCT</li>
+              <li>Tonometría y campimetría</li>
+              <li>Derivaciones a subespecialidades</li>
+            </ul>
+            <div class="cta-row"><a class="btn outline" href="https://wa.me/56938961882?text=Quiero%20agendar%20Oftalmolog%C3%ADa" target="_blank" rel="noopener">Agendar</a></div>
           </article>
+
           <article class="card">
             <img src="assets/img/odonto.png" alt="Atención odontológica" width="800" height="520" loading="lazy" decoding="async">
             <h3>Odontología</h3>
-            <p>Odontología general, ortodoncia, endodoncia y más.</p>
+            <ul class="bullets">
+              <li>Odontología general y limpiezas</li>
+              <li>Ortodoncia y ortopedia</li>
+              <li>Endodoncia</li>
+              <li>Urgencias y controles</li>
+            </ul>
+            <div class="cta-row"><a class="btn outline" href="https://wa.me/56938961882?text=Quiero%20agendar%20Odontolog%C3%ADa" target="_blank" rel="noopener">Agendar</a></div>
           </article>
+
           <article class="card">
             <img src="assets/img/hero.jpg" alt="Atención accesible" width="800" height="520" loading="lazy" decoding="async">
             <h3>Accesible</h3>
-            <p>Atención cercana, precios justos y enfoque comunitario.</p>
+            <ul class="bullets">
+              <li>Atención cercana a la comunidad</li>
+              <li>Precios justos</li>
+              <li>Compromiso social</li>
+            </ul>
+            <div class="cta-row"><a class="btn outline" href="#contacto">Más información</a></div>
           </article>
         </div>
       </div>
@@ -155,6 +204,17 @@
       </div>
     </section>
 
+    <!-- ÚNETE COMO LEÓN -->
+    <section id="socios" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">¿Quieres hacerte socio?</h2>
+        <p>Sumarte como León ayuda a sostener nuestra labor médica comunitaria.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://wa.me/56938961882?text=Estoy%20interesado%20en%20ser%20socio%20del%20Club" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACTO -->
     <section id="contacto" class="section reveal">
       <div class="container contact-grid">
@@ -172,8 +232,23 @@
             <li><strong>Instagram:</strong>
               <a href="https://www.instagram.com/clubleoneslascondes" target="_blank" rel="noopener">@clubleoneslascondes</a>
             </li>
+            <li><strong>Email:</strong>
+              <a href="mailto:nicolasrojas1724@gmail.com">nicolasrojas1724@gmail.com</a>
+            </li>
           </ul>
+
+          <!-- Formulario (mailto a tu correo de prueba) -->
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="row">
+              <input type="text" name="nombre" placeholder="Tu nombre" aria-label="Tu nombre" required>
+              <input type="email" name="email" placeholder="Tu correo" aria-label="Tu correo" required>
+            </div>
+            <textarea name="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte" aria-label="Mensaje" required></textarea>
+            <button class="btn primary" type="submit">Enviar</button>
+            <p class="form-hint">* Por ahora este formulario abre tu cliente de correo y envía a <strong>nicolasrojas1724@gmail.com</strong></p>
+          </form>
         </div>
+
         <div>
           <iframe
             title="Ubicación Club de Leones Las Condes"
@@ -191,13 +266,13 @@
     </div>
   </footer>
 
-  <!-- Barra móvil (solo mobile) -->
+  <!-- Barra móvil -->
   <div class="mobile-cta">
     <a href="tel:+56224354502">Llamar</a>
     <a class="wa" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
-  <!-- Botón flotante (opcional, puedes quitarlo si usas la barra móvil) -->
+  <!-- Botón WA (opcional) -->
   <a class="cta-wa" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">WhatsApp</a>
 
   <!-- Schema.org -->
@@ -214,6 +289,13 @@
   }
   </script>
 
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.hero-slider', { loop:true, autoplay:{delay:4000}, effect:'fade', speed:800 });
+  </script>
+
+  <!-- JS -->
   <script src="assets/js/app.js"></script>
 </body>
 </html>
