@@ -215,27 +215,93 @@
       </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="section reveal">
-      <div class="container contact-grid">
-        <div>
-          <h2>Contacto</h2>
-          <ul class="contact-list" role="list">
-            <li><strong>Dirección:</strong>
-              <a href="https://www.google.com/maps/search/?api=1&query=Cirio%201620%2C%20Las%20Condes" target="_blank" rel="noopener">Cirio 1620, Las Condes</a>
-            </li>
-            <li><strong>Horarios:</strong> L–V 09:00–18:00</li>
-            <li><strong>Teléfono:</strong> <a href="tel:+56224354502">+56 2 2435 4502</a></li>
-            <li><strong>WhatsApp:</strong>
-              <a href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Escríbenos aquí</a>
-            </li>
-            <li><strong>Instagram:</strong>
-              <a href="https://www.instagram.com/clubleoneslascondes" target="_blank" rel="noopener">@clubleoneslascondes</a>
-            </li>
-            <li><strong>Email:</strong>
-              <a href="mailto:nicolasrojas1724@gmail.com">nicolasrojas1724@gmail.com</a>
-            </li>
-          </ul>
+    <!-- CONTACTO (nuevo) -->
+<section id="contacto" class="section reveal">
+  <div class="container contact-grid">
+    <!-- Tarjeta de contacto -->
+    <div class="contact-card fade-up">
+      <header class="contact-header">
+        <h2>Contacto</h2>
+        <p class="sub">Estamos para ayudarte. Elige el canal que prefieras.</p>
+      </header>
+
+      <ul class="contact-list pro" role="list">
+        <li>
+          <span class="ico">📍</span>
+          <div>
+            <strong>Dirección</strong><br>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cirio%201620%2C%20Las%20Condes" target="_blank" rel="noopener">Cirio 1620, Las Condes</a>
+          </div>
+        </li>
+        <li>
+          <span class="ico">🕘</span>
+          <div>
+            <strong>Horarios</strong><br>L–V 09:00–18:00
+          </div>
+        </li>
+        <li>
+          <span class="ico">📞</span>
+          <div>
+            <strong>Teléfono</strong><br><a href="tel:+56224354502">+56 2 2435 4502</a>
+          </div>
+        </li>
+        <li>
+          <span class="ico">💬</span>
+          <div>
+            <strong>WhatsApp</strong><br>
+            <a href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Escríbenos aquí</a>
+          </div>
+        </li>
+        <li>
+          <span class="ico">📸</span>
+          <div>
+            <strong>Instagram</strong><br>
+            <a href="https://www.instagram.com/clubleoneslascondes" target="_blank" rel="noopener">@clubleoneslascondes</a>
+          </div>
+        </li>
+        <li>
+          <span class="ico">✉️</span>
+          <div>
+            <strong>Email</strong><br>
+            <a href="mailto:nicolasrojas1724@gmail.com">nicolasrojas1724@gmail.com</a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Form pro con labels flotantes -->
+      <form id="contact-form" class="contact-form pro-form" novalidate>
+        <div class="row">
+          <div class="field">
+            <input type="text" name="nombre" id="f-nombre" placeholder=" " required>
+            <label for="f-nombre">Tu nombre</label>
+          </div>
+          <div class="field">
+            <input type="email" name="email" id="f-email" placeholder=" " required>
+            <label for="f-email">Tu correo</label>
+          </div>
+        </div>
+        <div class="field">
+          <textarea name="mensaje" id="f-msg" rows="5" placeholder=" " required></textarea>
+          <label for="f-msg">Cuéntanos en qué podemos ayudarte</label>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Enviar</button>
+          <a class="btn outline" href="https://wa.me/56938961882?text=Hola%20quiero%20agendar%20hora" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        </div>
+        <p class="form-hint">* Por ahora este formulario abre tu correo y envía a <strong>nicolasrojas1724@gmail.com</strong></p>
+      </form>
+    </div>
+
+    <!-- Mapa -->
+    <div class="map-wrap fade-up d2">
+      <iframe
+        title="Ubicación Club de Leones Las Condes"
+        src="https://www.google.com/maps?q=Cirio%201620,%20Las%20Condes&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
 
           <!-- Formulario (mailto a tu correo de prueba) -->
           <form id="contact-form" class="contact-form" novalidate>

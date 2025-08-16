@@ -89,3 +89,60 @@ if (form) {
     window.location.href = `mailto:nicolasrojas1724@gmail.com?subject=${subject}&body=${body}`;
   });
 }
+// Animación 'fade-up' por IntersectionObserver (estilo referencia)
+(() => {
+  const els = document.querySelectorAll('.fade-up');
+  if(!els.length) return;
+  if(!('IntersectionObserver' in window)){
+    els.forEach(el => el.classList.add('on'));
+    return;
+  }
+  const io = new IntersectionObserver((es)=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('on');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.15});
+  els.forEach(el => io.observe(el));
+})();
+
+// Mejora UX del formulario: validación + toast
+(() => {
+  const form = document.getElementById('contact-form');
+  if(!form) return;
+
+  // Pequeño “toast” sin librerías
+  const toast = (msg) => {
+    const el = document.createElement('div');
+    el.textContent = msg;
+    el.style.cssText = `
+      position:fixed;left:50%;bottom:20px;transform:translateX(-50%);
+      background:#0D47A1;color:#fff;padding:.7rem 1rem;border-radius:999px;
+      box-shadow:0 10px 20px rgba(0,0,0,.15);z-index:9999;opacity:0;transition:opacity .2s
+    `;
+    document.body.appendChild(el);
+    requestAnimationFrame(()=> el.style.opacity = 1);
+    setTimeout(()=>{ el.style.opacity = 0; setTimeout(()=> el.remove(), 200); }, 2000);
+  };
+
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const data = new FormData(form);
+    const nombre = (data.get('nombre')||'').trim();
+    const email  = (data.get('email')||'').trim();
+    const mensaje= (data.get('mensaje')||'').trim();
+
+    if(!nombre || !email || !mensaje){
+      toast('Completa todos los campos');
+      return;
+    }
+    // mailto para pruebas
+    const subject = encodeURIComponent('Contacto web — Club de Leones Las Condes');
+    const body = encodeURIComponent(`Nombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`);
+    window.location.href = `mailto:nicolasrojas1724@gmail.com?subject=${subject}&body=${body}`;
+    toast('Abriendo tu correo…');
+    form.reset();
+  });
+})();
